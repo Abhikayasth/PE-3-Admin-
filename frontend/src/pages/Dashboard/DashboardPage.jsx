@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Card from "../../components/ui/Card"
-import StatCard from "../../components/UI/StatCard"
+import StatCard from "../../components/ui/StatCard"
 import { ShoppingCartIcon, PackageIcon, UsersIcon, CreditCardIcon } from "../../components/Icons/Icons"
 import SalesChart from "./components/SalesChart"
 import RecentOrders from "./components/RecentOrders"
