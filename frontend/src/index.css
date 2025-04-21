@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ff6f00;
+  --primary-light: #ff9e40;
+  --primary-dark: #c43e00;
+  --secondary: #0b2545;
+  --secondary-light: #1e3a5f;
+  --secondary-dark: #051528;
+  --accent: #ffffff;
+  --gray-light: #f3f4f6;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply text-secondary bg-gray-50;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 transform hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-light focus:ring-secondary shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary shadow-sm hover:shadow-md;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
+
+  .badge {
+    @apply px-2 py-1 text-xs font-medium rounded-full transition-all duration-200;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-error {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .nav-link {
+    @apply flex items-center px-4 py-3 rounded-md transition-all duration-200;
+  }
+
+  .nav-link-active {
+    @apply bg-primary text-white shadow-md;
+  }
+
+  .nav-link-inactive {
+    @apply text-gray-300 hover:bg-secondary-light hover:text-white;
+  }
+
+  .table-row {
+    @apply transition-colors duration-200;
+  }
+
+  .table-row-hover {
+    @apply hover:bg-primary/5;
+  }
+}
