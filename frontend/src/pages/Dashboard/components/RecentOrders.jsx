@@ -1,3 +1,5 @@
+"use client"
+
 import Table from "../../../components/ui/Table"
 
 const RecentOrders = () => {
@@ -11,9 +13,28 @@ const RecentOrders = () => {
 
   const columns = [
     { key: "id", header: "Order ID" },
-    { key: "customer", header: "Customer" },
-    { key: "date", header: "Date" },
-    { key: "amount", header: "Amount" },
+    {
+      key: "customer",
+      header: "Customer",
+      render: (row) => (
+        <div className="flex items-center">
+          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-3 shadow-sm">
+            {row.customer.charAt(0)}
+          </div>
+          <div>{row.customer}</div>
+        </div>
+      ),
+    },
+    {
+      key: "date",
+      header: "Date",
+      render: (row) => <span>{row.date}</span>,
+    },
+    {
+      key: "amount",
+      header: "Amount",
+      render: (row) => <span className="font-medium text-primary">{row.amount}</span>,
+    },
     {
       key: "status",
       header: "Status",

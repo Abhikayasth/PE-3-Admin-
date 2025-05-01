@@ -84,3 +84,59 @@ body {
     @apply hover:bg-primary/5;
   }
 }
+
+/* Custom decorative elements */
+.shape-divider {
+  @apply absolute w-full overflow-hidden;
+  height: 80px;
+}
+
+.shape-divider svg {
+  @apply absolute block w-[calc(100%+1.3px)] h-full;
+}
+
+.shape-divider-bottom {
+  @apply bottom-0 left-0;
+}
+
+.shape-divider-top {
+  @apply top-0 left-0;
+}
+
+/* Decorative cuts and shapes */
+.cut-corner {
+  @apply relative overflow-hidden;
+}
+
+.cut-corner::before {
+  content: "";
+  @apply absolute top-0 right-0 w-0 h-0 border-t-[20px] border-r-[20px] border-t-primary border-r-transparent;
+}
+
+/* Modern design elements */
+.gradient-border {
+  @apply relative;
+}
+
+.gradient-border::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary;
+}
+
+/* Hover effects */
+.hover-lift {
+  @apply transition-all duration-300;
+}
+
+.hover-lift:hover {
+  @apply transform -translate-y-1 shadow-lg;
+}
+
+/* Fixed hover-glow (manual box-shadow, no @apply) */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.5);
+}

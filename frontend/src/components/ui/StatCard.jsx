@@ -1,4 +1,17 @@
-import Card from "./Card"
+"use client";
+
+const Card = ({ children, className = "", onClick, hover = false }) => {
+  return (
+    <div
+      className={`card bg-white ${
+        hover ? "hover:shadow-card-hover transform hover:scale-[1.01] transition-all duration-300" : ""
+      } ${className}`}
+      onClick={onClick}
+    >
+      {children}
+    </div>
+  );
+};
 
 const StatCard = ({ title, value, icon, trend, trendValue, color = "primary" }) => {
   return (
@@ -16,10 +29,13 @@ const StatCard = ({ title, value, icon, trend, trendValue, color = "primary" }) 
           )}
         </div>
 
-        <div className={`p-3 rounded-full bg-${color}-light/20 text-${color} shadow-md`}>{icon}</div>
+        {/* Icon inside colored circle */}
+        <div className={`p-3 rounded-full bg-${color}-light/20 text-${color} shadow-md`}>
+          {icon}
+        </div>
       </div>
     </Card>
-  )
-}
+  );
+};
 
-export default StatCard
+export default StatCard;

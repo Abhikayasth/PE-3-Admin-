@@ -6,6 +6,9 @@ import Orders from "./pages/orders/Orders"
 import Users from "./pages/Users/Users"
 import Payments from "./pages/Payments/Payments"
 import Settings from "./pages/settings/Settings"
+import Profile from "./pages/Profile/ProfilePage"
+import NotFound from "./pages/NotFound"
+import Inventory from "./pages/Inventory/InventoryPage"
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path="users" element={<Users />} />
           <Route path="payments" element={<Payments />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="inventory" element={<Inventory />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </div>

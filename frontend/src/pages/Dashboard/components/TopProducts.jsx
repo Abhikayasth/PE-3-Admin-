@@ -1,3 +1,5 @@
+"use client"
+
 const TopProducts = () => {
   const products = [
     { name: "Wireless Headphones", sales: 245, percentage: 28 },
@@ -17,7 +19,7 @@ const TopProducts = () => {
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
             <div
-              className="bg-primary h-2 rounded-full transition-all duration-500 ease-out group-hover:bg-primary-dark"
+              className="bg-gradient-to-r from-primary to-primary-light h-2 rounded-full transition-all duration-500 ease-out group-hover:shadow-md"
               style={{ width: `${product.percentage}%` }}
             ></div>
           </div>

@@ -22,6 +22,7 @@ const Button = ({
     secondary: "btn-secondary",
     outline: "btn-outline",
     ghost: "text-primary hover:bg-primary/10 focus:ring-primary",
+    destructive: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
   }
 
   return (
